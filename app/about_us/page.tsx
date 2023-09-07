@@ -63,7 +63,7 @@ const activity = [
   {
     id: 1,
     type: 'created',
-    person: { name: 'Chelsea Hagon' },
+    person: { name: 'Chelsea Hagmn' },
     date: '7d ago',
     dateTime: '2023-01-23T10:32',
   },
