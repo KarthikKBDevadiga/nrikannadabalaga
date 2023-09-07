@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className='bg-[#ffff00]'>
       <div className='flex justify-between mx-auto max-w-7xl'>
         <div className='py-3 text-sm text-blue-900'>
-          © 2023 NRI Kannada Balaga. All rights reserved.
+          © 2023 NRI Kannada Balaga. All rights reserved to the website .
         </div>
         <div className='flex gap-4 py-3 text-[#ff0000]'>
           <FacebookIcon className='w-5 h-5' />
