@@ -1,9 +1,10 @@
 import React from "react";
-import FacebookIcon from "@/icons/social/FacebookIcon";
-import TwitterIcon from "@/icons/social/TwitterIcon";
-import YoutubeIcon from "@/icons/social/YoutubeIcon";
+import { FacebookShareButton, TwitterShareButton, EmailShareButton } from "react-share";
+import { FacebookIcon, TwitterIcon, EmailIcon } from "react-share";
 
 const Footer = () => {
+  const shareUrl = "https://your-website-url.com"; // Replace with your website URL
+  const title = "Check out this website"; 
   return (
     <footer className="bg-gray-800 text-white py-8">
       <div className="container mx-auto">
@@ -47,15 +48,16 @@ const Footer = () => {
         <div className="mt-8">
           <h3 className="text-lg font-semibold">Follow Us</h3>
           <div className="flex mt-2">
-            <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="mr-2">
-              <FacebookIcon className="w-6 h-6" />
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noreferrer" className="mr-2">
-              <TwitterIcon className="w-6 h-6" />
-            </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
-              <YoutubeIcon className="w-6 h-6" />
-            </a>
+            {/* Social Media Sharing Buttons */}
+            <FacebookShareButton url={shareUrl} quote={title} className="mr-2">
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+            <TwitterShareButton url={shareUrl} title={title} className="mr-2">
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+            <EmailShareButton url={shareUrl} subject={title}>
+              <EmailIcon size={32} round />
+            </EmailShareButton>
           </div>
         </div>
 
