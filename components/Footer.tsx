@@ -7,7 +7,7 @@ const Footer = () => {
   const title = "Check out this website"; 
   return (
     <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
             <h3 className="text-lg font-semibold">Menu</h3>
@@ -45,30 +45,34 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8">
-          <h3 className="text-lg font-semibold">Follow Us</h3>
-          <div className="flex mt-2">
-            {/* Social Media Sharing Buttons */}
-            <FacebookShareButton url={shareUrl} quote={title} className="mr-2">
-              <FacebookIcon size={32} round />
-            </FacebookShareButton>
-            <TwitterShareButton url={shareUrl} title={title} className="mr-2">
-              <TwitterIcon size={32} round />
-            </TwitterShareButton>
-            <EmailShareButton url={shareUrl} subject={title}>
-              <EmailIcon size={32} round />
-            </EmailShareButton>
+        <div className="flex justify-center items-center mt-8">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold">Follow Us</h3>
+            <div className="flex mt-2">
+              {/* Social Media Sharing Buttons */}
+              <FacebookShareButton url={shareUrl} quote={title} className="mr-2">
+                <FacebookIcon size={32} round />
+              </FacebookShareButton>
+              <TwitterShareButton url={shareUrl} title={title} className="mr-2">
+                <TwitterIcon size={32} round />
+              </TwitterShareButton>
+              <EmailShareButton url={shareUrl} subject={title}>
+                <EmailIcon size={32} round />
+              </EmailShareButton>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8">
-          <h3 className="text-lg font-semibold">Join Our Newsletter</h3>
-          <p className="mt-2">Subscribe to our newsletter to keep informed about upcoming events, anivaasi, and latest news.</p>
-          <form className="mt-4">
-            <input type="email" placeholder="Email" required className="px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600" />
-            <button type="submit" className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">SUBSCRIBE</button>
-          </form>
-        </div>
+        <div className="flex justify-center items-center mt-8">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold">Join Our Newsletter</h3>
+            <p className="mt-2">Subscribe to our newsletter to keep informed about upcoming events, anivaasi, and latest news.</p>
+            <form className="mt-4">
+              <input type="email" placeholder="Email" required className="px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600" />
+              <button type="submit" className="mt-2 ml-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">SUBSCRIBE</button>
+            </form>
+          </div>
+          </div>
       </div>
 
       <div className="bg-gray-900 py-4">
