@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
       </div>
 
-      <div className="bg-gray-900 py-4">
+      <div className="bg-gray-900 py-4 my-4">
         <div className="container mx-auto">
           <p className="text-center text-sm text-gray-400">Copyright  © 2023 NRI Kannada Balaga. All rights reserved. </p>
           
