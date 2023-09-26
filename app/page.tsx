@@ -247,21 +247,49 @@ export default function Index() {
             </div>
           </motion.div>
         </motion.div>
-      </div>
-      <div className="grid items-start max-w-2xl grid-cols-1 grid-rows-1 mx-auto mt-4 gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-  <div className="lg:col-span-1">
-    {/* Image */}
+ </div>
+
+ <div className="max-w-6xl mx-auto mt-4">
+  <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
+  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
+    <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+      <img
+        src="https://picsum.photos/400/200"
+        alt="Lorem Picsum Image 1"
+        className="w-full h-auto"
+      />
+      <p className="mt-2">
+        Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
+      </p>
+    </div>
+    <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
     <img
-      src="your-image-source.jpg"
-      alt="Your Image Alt Text"
-      className="max-w-full h-auto"
+      src="https://picsum.photos/400/200"
+      alt="Lorem Picsum Image 4"
+      className="w-full h-auto"
     />
-  </div>
-  <div className="lg:col-span-1">
-    {/* Text */}
-    <p>
+    <p className="mt-2">
       Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
     </p>
+  </div><div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+    <img
+      src="https://picsum.photos/400/200"
+      alt="Lorem Picsum Image 4"
+      className="w-full h-auto"
+    />
+    <p className="mt-2">
+      Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
+    </p>
+  </div><div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+    <img
+      src="https://picsum.photos/400/200"
+      alt="Lorem Picsum Image 4"
+      className="w-full h-auto"
+    />
+    <p className="mt-2">
+      Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
+    </p>
+  </div>
   </div>
 </div>
 
