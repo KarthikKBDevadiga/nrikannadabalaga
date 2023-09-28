@@ -125,6 +125,7 @@ export default function Index() {
 
   return (
     <>
+    <PageFrame/>
       <div className='bg-yellow-50 '>
         <motion.div
           className='max-w-6xl p-4 mx-auto py-36'

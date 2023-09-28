@@ -360,7 +360,7 @@ export default function PageFrame({ children, meta }: PageFrameProps) {
 
       <div className="overflow-scroll">
         <main className="mx-auto overflow-scroll">{children}</main>
-        <Footer />
+      
       </div>
     </div>
   );
