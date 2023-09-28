@@ -126,8 +126,9 @@ export default function Index() {
 
   return (
     <>
-   <div className="bg-yellow-50">
-        <div className="max-w-6xl p-4 mx-auto py-36">
+      <PageFrame />
+      <div className="bg-yellow-50">
+        <div className="max-w-6xl p-2 mx-auto py-32">
           <div className="flex flex-col lg:flex-row">
             <div className="lg:w-1/2">
               <Carousel
@@ -141,23 +142,31 @@ export default function Index() {
                 transitionTime={500}
               >
                 <div>
-                  <img src="https://picsum.photos/400/200" alt="Carousel Image 1" />
+                  <img
+                    src="https://picsum.photos/400/200"
+                    alt="Carousel Image 1"
+                  />
                   <p className="legend">Caption for Image 1</p>
                 </div>
                 <div>
-                  <img src="https://picsum.photos/400/200" alt="Carousel Image 2" />
+                  <img
+                    src="https://picsum.photos/400/200"
+                    alt="Carousel Image 2"
+                  />
                   <p className="legend">Caption for Image 2</p>
                 </div>
                 {/* Add more carousel images here */}
               </Carousel>
             </div>
             <div className="lg:w-1/2">
-              <h2 className="text-2xl text-center md:text-6xl">NRI Kannada Balaga</h2>
+              <h2 className="text-2xl text-center md:text-6xl">
+                NRI Kannada Balaga
+              </h2>
               <p className="mt-8 text-sm text-center md:text-lg">
                 Kannada Balaga UK is turning 40 years old! We are delighted to
-                invite you to attend Kannada Balaga’s 40th Anniversary celebrations
-                to be held on 30th September and 1st October 2023 at Byron Hall,
-                Christchurch Ave, Harrow, London HA3 5BD!
+                invite you to attend Kannada Balaga’s 40th Anniversary
+                celebrations to be held on 30th September and 1st October 2023
+                at Byron Hall, Christchurch Ave, Harrow, London HA3 5BD!
               </p>
               {/* <div className="group flex border-2 border-gray-400 focus-within:border-[#ff0000] duration-500 max-w-xl mx-auto mt-16 rounded-md">
                 <input
@@ -174,51 +183,57 @@ export default function Index() {
         </div>
       </div>
 
- <div className="max-w-6xl mx-auto mt-4">
-  <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
-  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
-    <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
-      <img
-        src="https://picsum.photos/400/200"
-        alt="Lorem Picsum Image 1"
-        className="w-full h-auto"
-      />
-      <p className="mt-2">
-        Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
-      </p>
-    </div>
-    <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
-    <img
-      src="https://picsum.photos/400/200"
-      alt="Lorem Picsum Image 4"
-      className="w-full h-auto"
-    />
-    <p className="mt-2">
-      Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
-    </p>
-  </div><div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
-    <img
-      src="https://picsum.photos/400/200"
-      alt="Lorem Picsum Image 4"
-      className="w-full h-auto"
-    />
-    <p className="mt-2">
-      Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
-    </p>
-  </div><div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
-    <img
-      src="https://picsum.photos/400/200"
-      alt="Lorem Picsum Image 4"
-      className="w-full h-auto"
-    />
-    <p className="mt-2">
-      Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
-    </p>
-  </div>
-  </div>
-</div>
-<Footer/>
-</>
-    
+      <div className="max-w-6xl mx-auto mt-4">
+        <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
+          <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+            <img
+              src="https://picsum.photos/400/200"
+              alt="Lorem Picsum Image 1"
+              className="w-full h-auto"
+            />
+            <p className="mt-2">
+              Your text content goes here. You can add multiple paragraphs,
+              headings, or any other text content you need.
+            </p>
+          </div>
+          <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+            <img
+              src="https://picsum.photos/400/200"
+              alt="Lorem Picsum Image 4"
+              className="w-full h-auto"
+            />
+            <p className="mt-2">
+              Your text content goes here. You can add multiple paragraphs,
+              headings, or any other text content you need.
+            </p>
+          </div>
+          <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+            <img
+              src="https://picsum.photos/400/200"
+              alt="Lorem Picsum Image 4"
+              className="w-full h-auto"
+            />
+            <p className="mt-2">
+              Your text content goes here. You can add multiple paragraphs,
+              headings, or any other text content you need.
+            </p>
+          </div>
+          <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+            <img
+              src="https://picsum.photos/400/200"
+              alt="Lorem Picsum Image 4"
+              className="w-full h-auto"
+            />
+            <p className="mt-2">
+              Your text content goes here. You can add multiple paragraphs,
+              headings, or any other text content you need.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="my-10"></div>
+      <Footer />
+    </>
   );
 }

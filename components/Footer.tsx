@@ -6,7 +6,7 @@ const Footer = () => {
   const shareUrl = "https://your-website-url.com"; // Replace with your website URL
   const title = "Check out this website";
   return (
-    <footer className="bg-gray-800 text-white px-4 py-1">
+    <footer className="bg-gray-800 text-white px-4 py-4">
       <div className="container mx-auto px-8 ">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/2 lg:w-1/4 mb-5 lg:mb-0">
@@ -46,9 +46,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="border-t border-gray-600 mt-5 mb-6" />
+        <hr className="border-t border-gray-600 mt-5 mb-5" />
         <div className="flex flex-col md:flex-row md:justify-between mt-6">
-          <div className="text-center md:text-left mb-4 md:mb-0">
+          <div className="text-center md:text-left mb-3 md:mb-0">
             <h3 className="text-lg font-semibold">Follow Us</h3>
             <div className="flex mt-1">
               {/* Social Media Sharing Buttons */}
@@ -79,7 +79,7 @@ const Footer = () => {
                 type="email"
                 placeholder="Email"
                 required
-                className="px-9 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="px-7 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
               <button
                 type="submit"
