@@ -125,26 +125,26 @@ export default function Index() {
 
   return (
     <>
-    <PageFrame/>
-      <div className='bg-yellow-50 '>
+      <PageFrame />
+      <div className="bg-yellow-50 ">
         <motion.div
-          className='max-w-6xl p-4 mx-auto py-36'
+          className="max-w-6xl p-4 mx-auto py-36"
           variants={{
             hidden: {},
             visible: {
               transition: {
                 delay: 0.5,
-                when: 'beforeChildren',
+                when: "beforeChildren",
                 staggerChildren: 0.2,
               },
             },
           }}
-          whileInView='visible'
-          initial='hidden'
+          whileInView="visible"
+          initial="hidden"
           viewport={{ once: true }}
         >
           <motion.h2
-            className='text-2xl text-center md:text-6xl'
+            className="text-2xl text-center md:text-6xl"
             variants={{
               hidden: {
                 opacity: 0,
@@ -158,7 +158,7 @@ export default function Index() {
               },
             }}
             transition={{
-              ease: 'easeOut',
+              ease: "easeOut",
               duration: 0.5,
               once: true,
             }}
@@ -166,7 +166,7 @@ export default function Index() {
             NRI Kannada Balaga
           </motion.h2>
           <motion.div
-            className='mt-8 text-sm text-center md:text-lg'
+            className="mt-8 text-sm text-center md:text-lg"
             variants={{
               hidden: {
                 opacity: 0,
@@ -180,7 +180,7 @@ export default function Index() {
               },
             }}
             transition={{
-              ease: 'easeOut',
+              ease: "easeOut",
               duration: 0.5,
               once: true,
             }}
@@ -191,7 +191,7 @@ export default function Index() {
             Christchurch Ave, Harrow, London HA3 5BD!
           </motion.div>
           <motion.div
-            className='mt-8 text-sm text-center md:text-lg'
+            className="mt-8 text-sm text-center md:text-lg"
             variants={{
               hidden: {
                 opacity: 0,
@@ -205,7 +205,7 @@ export default function Index() {
               },
             }}
             transition={{
-              ease: 'easeOut',
+              ease: "easeOut",
               duration: 0.5,
               once: true,
             }}
@@ -233,69 +233,75 @@ export default function Index() {
               },
             }}
             transition={{
-              ease: 'easeOut',
+              ease: "easeOut",
               duration: 0.5,
               once: true,
             }}
-            className='group flex border-2 border-gray-400 focus-within:border-[#ff0000] duration-500 max-w-xl mx-auto mt-16 rounded-md'
+            className="group flex border-2 border-gray-400 focus-within:border-[#ff0000] duration-500 max-w-xl mx-auto mt-16 rounded-md"
           >
             <input
-              className='flex-1 px-3 py-1.5 outline-none bg-transparent text-sm focus:placeholder-red-300 placeholder-gray-400 duration-500'
-              type='email'
-              placeholder='ashokkumar@gmail.com'
+              className="flex-1 px-3 py-1.5 outline-none bg-transparent text-sm focus:placeholder-red-300 placeholder-gray-400 duration-500"
+              type="email"
+              placeholder="ashokkumar@gmail.com"
             />
-            <div className='py-1.5 px-4 bg-gray-400  group-focus-within:bg-[#ff0000] group-focus-within:text-[#ffff00] cursor-pointer duration-500'>
+            <div className="py-1.5 px-4 bg-gray-400  group-focus-within:bg-[#ff0000] group-focus-within:text-[#ffff00] cursor-pointer duration-500">
               Subscribe
             </div>
           </motion.div>
         </motion.div>
- </div>
-
- <div className="max-w-6xl mx-auto mt-4">
-  <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
-  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
-    <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
-      <img
-        src="https://picsum.photos/400/200"
-        alt="Lorem Picsum Image 1"
-        className="w-full h-auto"
-      />
-      <p className="mt-2">
-        Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
-      </p>
-    </div>
-    <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
-    <img
-      src="https://picsum.photos/400/200"
-      alt="Lorem Picsum Image 4"
-      className="w-full h-auto"
-    />
-    <p className="mt-2">
-      Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
-    </p>
-  </div><div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
-    <img
-      src="https://picsum.photos/400/200"
-      alt="Lorem Picsum Image 4"
-      className="w-full h-auto"
-    />
-    <p className="mt-2">
-      Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
-    </p>
-  </div><div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
-    <img
-      src="https://picsum.photos/400/200"
-      alt="Lorem Picsum Image 4"
-      className="w-full h-auto"
-    />
-    <p className="mt-2">
-      Your text content goes here. You can add multiple paragraphs, headings, or any other text content you need.
-    </p>
-  </div>
-  </div>
-</div>
-<Footer/>
-</>
-    
+      </div>
+      <div className="my-6"></div>
+      <div className="max-w-6xl mx-auto mt-4">
+        <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
+          <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+            <img
+              src="https://picsum.photos/400/200"
+              alt="Lorem Picsum Image 1"
+              className="w-full h-auto"
+            />
+            <p className="mt-2">
+              Your text content goes here. You can add multiple paragraphs,
+              headings, or any other text content you need.
+            </p>
+          </div>
+          <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+            <img
+              src="https://picsum.photos/400/200"
+              alt="Lorem Picsum Image 4"
+              className="w-full h-auto"
+            />
+            <p className="mt-2">
+              Your text content goes here. You can add multiple paragraphs,
+              headings, or any other text content you need.
+            </p>
+          </div>
+          <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+            <img
+              src="https://picsum.photos/400/200"
+              alt="Lorem Picsum Image 4"
+              className="w-full h-auto"
+            />
+            <p className="mt-2">
+              Your text content goes here. You can add multiple paragraphs,
+              headings, or any other text content you need.
+            </p>
+          </div>
+          <div className="max-w-xs p-4 mx-auto bg-white shadow-md rounded-lg">
+            <img
+              src="https://picsum.photos/400/200"
+              alt="Lorem Picsum Image 4"
+              className="w-full h-auto"
+            />
+            <p className="mt-2">
+              Your text content goes here. You can add multiple paragraphs,
+              headings, or any other text content you need.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="my-10"></div>
+      <Footer />
+    </>
   );
 }
