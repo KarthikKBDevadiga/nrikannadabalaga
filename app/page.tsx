@@ -19,7 +19,8 @@ import {
 import PageFrame from '@/components/PageFrame';
 import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
-
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const activity = [
   {
@@ -125,130 +126,53 @@ export default function Index() {
 
   return (
     <>
-      <div className='bg-yellow-50 '>
-        <motion.div
-          className='max-w-6xl p-4 mx-auto py-36'
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                delay: 0.5,
-                when: 'beforeChildren',
-                staggerChildren: 0.2,
-              },
-            },
-          }}
-          whileInView='visible'
-          initial='hidden'
-          viewport={{ once: true }}
-        >
-          <motion.h2
-            className='text-2xl text-center md:text-6xl'
-            variants={{
-              hidden: {
-                opacity: 0,
-                scale: 0.95,
-                y: 100,
-              },
-              visible: {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-              },
-            }}
-            transition={{
-              ease: 'easeOut',
-              duration: 0.5,
-              once: true,
-            }}
-          >
-            NRI Kannada Balaga
-          </motion.h2>
-          <motion.div
-            className='mt-8 text-sm text-center md:text-lg'
-            variants={{
-              hidden: {
-                opacity: 0,
-                scale: 0.95,
-                y: 100,
-              },
-              visible: {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-              },
-            }}
-            transition={{
-              ease: 'easeOut',
-              duration: 0.5,
-              once: true,
-            }}
-          >
-            Kannada Balaga UK is turning 40 years old! We are delighted to
-            invite you to attend Kannada Balaga’s 40th Anniversary celebrations
-            to be held on 30th September and 1st October 2023 at Byron Hall,
-            Christchurch Ave, Harrow, London HA3 5BD!
-          </motion.div>
-          <motion.div
-            className='mt-8 text-sm text-center md:text-lg'
-            variants={{
-              hidden: {
-                opacity: 0,
-                scale: 0.95,
-                y: 100,
-              },
-              visible: {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-              },
-            }}
-            transition={{
-              ease: 'easeOut',
-              duration: 0.5,
-              once: true,
-            }}
-          >
-            The program has a Royal presence – His Highness Yaduveer
-            Krishnadutta Chamaraja Wadiyar, Maharaja of Mysore, will be the
-            Chief Guest for the event! Iconic personalities like Dr Gururaja
-            Karajagi, Shri Vishweshwara Bhat and His Holiness Swamy Japanandaji
-            Maharaj are the Guests of Honour. To top it all, we have melody king
-            Rajesh Krishnan and team entertaining the crowd to their fantastic
-            music!
-          </motion.div>
-
-          <motion.div
-            variants={{
-              hidden: {
-                opacity: 0,
-                scale: 0.95,
-                y: 100,
-              },
-              visible: {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-              },
-            }}
-            transition={{
-              ease: 'easeOut',
-              duration: 0.5,
-              once: true,
-            }}
-            className='group flex border-2 border-gray-400 focus-within:border-[#ff0000] duration-500 max-w-xl mx-auto mt-16 rounded-md'
-          >
-            <input
-              className='flex-1 px-3 py-1.5 outline-none bg-transparent text-sm focus:placeholder-red-300 placeholder-gray-400 duration-500'
-              type='email'
-              placeholder='ashokkumar@gmail.com'
-            />
-            <div className='py-1.5 px-4 bg-gray-400  group-focus-within:bg-[#ff0000] group-focus-within:text-[#ffff00] cursor-pointer duration-500'>
-              Subscribe
+   <div className="bg-yellow-50">
+        <div className="max-w-6xl p-4 mx-auto py-36">
+          <div className="flex flex-col lg:flex-row">
+            <div className="lg:w-1/2">
+              <Carousel
+                showArrows={true}
+                showStatus={false}
+                showIndicators={false}
+                infiniteLoop={true}
+                useKeyboardArrows={true}
+                autoPlay={true}
+                interval={5000}
+                transitionTime={500}
+              >
+                <div>
+                  <img src="https://picsum.photos/400/200" alt="Carousel Image 1" />
+                  <p className="legend">Caption for Image 1</p>
+                </div>
+                <div>
+                  <img src="https://picsum.photos/400/200" alt="Carousel Image 2" />
+                  <p className="legend">Caption for Image 2</p>
+                </div>
+                {/* Add more carousel images here */}
+              </Carousel>
             </div>
-          </motion.div>
-        </motion.div>
- </div>
+            <div className="lg:w-1/2">
+              <h2 className="text-2xl text-center md:text-6xl">NRI Kannada Balaga</h2>
+              <p className="mt-8 text-sm text-center md:text-lg">
+                Kannada Balaga UK is turning 40 years old! We are delighted to
+                invite you to attend Kannada Balaga’s 40th Anniversary celebrations
+                to be held on 30th September and 1st October 2023 at Byron Hall,
+                Christchurch Ave, Harrow, London HA3 5BD!
+              </p>
+              {/* <div className="group flex border-2 border-gray-400 focus-within:border-[#ff0000] duration-500 max-w-xl mx-auto mt-16 rounded-md">
+                <input
+                  className="flex-1 px-3 py-1.5 outline-none bg-transparent text-sm focus:placeholder-red-300 placeholder-gray-400 duration-500"
+                  type="email"
+                  placeholder="ashokkumar@gmail.com"
+                />
+                <div className="py-1.5 px-4 bg-gray-400 group-focus-within:bg-[#ff0000] group-focus-within:text-[#ffff00] cursor-pointer duration-500">
+                  Subscribe
+                </div>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
 
  <div className="max-w-6xl mx-auto mt-4">
   <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
