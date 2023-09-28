@@ -183,6 +183,29 @@ export default function Index() {
         </div>
       </div>
 
+      <div className="my-10  bg-white"></div>
+
+      <div className="bg-white-100 py-16">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-2xl text-center md:text-6xl">More About Us</h2>
+          <p className="mt-8 text-sm text-center md:text-lg">
+            This is the official website of Kannada Balaga UK. Kannada Balaga UK
+            is a Registered Charity (Reg. Charity number 326572). The aims and
+            objectives of the organisation are to promote kannada language,
+            culture and heritage in UK. Kannada Balaga is not affiliated to any
+            religious or political organisation and welcomes everybody with
+            links to Kannada language to join us irrespective of their faith,
+            beliefs, religion, caste or sexual orientation. Kannada Balaga is
+            involved with various charitable activities in UK and India through
+            its charity wing. All members and office bearers have honorary
+            positions and fulfill their roles on voluntary basis. Kannada Balaga
+            conducts two cultural events annually – Ugadi and Deepavali. Income
+            generated through these events is spent on charitable donations.
+          </p>
+        </div>
+      </div>
+
+      <div className="my-10  bg-white"></div>
       <div className="max-w-6xl mx-auto mt-4">
         <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
