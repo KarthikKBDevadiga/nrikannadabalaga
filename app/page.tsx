@@ -18,6 +18,7 @@ import {
 } from '@heroicons/react/20/solid';
 import PageFrame from '@/components/PageFrame';
 import { motion } from 'framer-motion';
+import Footer from '@/components/Footer';
 
 
 const activity = [
@@ -123,7 +124,7 @@ export default function Index() {
   const [selected, setSelected] = useState(moods[5]);
 
   return (
-    <PageFrame>
+    <>
       <div className='bg-yellow-50 '>
         <motion.div
           className='max-w-6xl p-4 mx-auto py-36'
@@ -292,7 +293,8 @@ export default function Index() {
   </div>
   </div>
 </div>
-
-    </PageFrame>
+<Footer/>
+</>
+    
   );
 }
