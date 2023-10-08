@@ -1,24 +1,10 @@
-"use client";
-import { Fragment,useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Dialog, Listbox, Menu, Transition } from "@headlessui/react";
 import {
   BellIcon,
   XMarkIcon as XMarkIconOutline,
 } from "@heroicons/react/24/outline";
-import classNames from "@/helpers/classNames";
-import { Metadata } from "next";
-import CloseIcon from "@/icons/CloseIcon";
-import MenuIcon from "@/icons/MenuIcon";
 import Link from "next/link";
-
-const navigation = [
-  { name: "Home", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Blog", href: "#" },
-  { name: "Past Events", href: "#" },
-  { name: "Feature Events", href: "#" },
-  { name: "Contact Us", href: "/app/contact" },
-];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -53,9 +39,10 @@ export default function Navbar() {
                 />
               </div>
             </Link>
+
             <button
               type="button"
-              className="md:hidden text-white focus:outline-none"
+              className="md:hidden text-white focus:outline-none absolute right-4 top-4"
               onClick={() => {
                 setMobileMenuOpen(!mobileMenuOpen);
               }}
@@ -67,31 +54,39 @@ export default function Navbar() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {mobileMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                )}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d={
+                    mobileMenuOpen
+                      ? "M4 6h16M4 12h16m-7 6h7"
+                      : "M4 6h16M4 12h16M4 18h16"
+                  }
+                />
               </svg>
             </button>
           </div>
 
           <div className="hidden md:flex space-x-4 text-white">
-            {navigation.map((item, itemIdx) => (
-              <Link href={item.href} key={itemIdx}>
-                <div className="hover:text-gray-300">{item.name}</div>
-              </Link>
-            ))}
+            <Link href="#">
+              <div className="hover:text-gray-300">Home</div>
+            </Link>
+            <Link href="#">
+              <div className="hover:text-gray-300">About Us</div>
+            </Link>
+            <Link href="#">
+              <div className="hover:text-gray-300">Blog</div>
+            </Link>
+            <Link href="#">
+              <div className="hover:text-gray-300">Past Events</div>
+            </Link>
+            <Link href="#">
+              <div className="hover:text-gray-300">Feature Events</div>
+            </Link>
+            <Link href="/app/contact">
+              <div className="hover:text-gray-300">Contact Us</div>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -108,19 +103,56 @@ export default function Navbar() {
       </nav>
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed top-0 right-0 w-1/2 md:hidden bg-gray-900/70 backdrop-blur-md z-10">
-          <div className="px-4 pt-2 pb-3 space-y-2">
-            {navigation.map((item, itemIdx) => (
-              <div key={itemIdx}>
-                <a
-                  href={item.href}
-                  className="text-white hover:text-gray-300"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+        <div className="fixed top-0 right-0 w-1/2 h-screen bg-gray-900/70 backdrop-blur-md md:w-1/2 md:max-w-md md:overflow-y-auto z-10">
+          <div className="flex flex-col justify-center items-start h-full p-6 space-y-4">
+            <Link href="#">
+              <div
+                className="text-white hover:text-gray-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
               </div>
-            ))}
+            </Link>
+            <Link href="#">
+              <div
+                className="text-white hover:text-gray-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About Us
+              </div>
+            </Link>
+            <Link href="#">
+              <div
+                className="text-white hover:text-gray-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
+              </div>
+            </Link>
+            <Link href="#">
+              <div
+                className="text-white hover:text-gray-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Past Events
+              </div>
+            </Link>
+            <Link href="#">
+              <div
+                className="text-white hover:text-gray-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Feature Events
+              </div>
+            </Link>
+            <Link href="/app/contact">
+              <div
+                className="text-white hover:text-gray-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact Us
+              </div>
+            </Link>
             <div>
               <button
                 className="text-white hover:text-gray-300"
@@ -136,7 +168,7 @@ export default function Navbar() {
       {/* Page Content */}
       <div
         className={`transition-all duration-300 ${
-          mobileMenuOpen ? "translate-x-1/2" : "translate-x-0"
+          mobileMenuOpen ? "translate-x-full md:translate-x-0" : "translate-x-0"
         }`}
       >
         {/* Your page content goes here */}
