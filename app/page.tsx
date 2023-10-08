@@ -21,6 +21,7 @@ import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Navbar from '@/components/Navbar';
 
 
 
@@ -34,7 +35,7 @@ export default function Index() {
 
   return (
     <>
-      <PageFrame />
+      <Navbar/>
       <div className="">
         <div className="max-w-6xl p-2 mx-auto py-32">
           <div className="flex flex-col lg:flex-row">

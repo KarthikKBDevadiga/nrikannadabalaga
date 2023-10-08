@@ -72,7 +72,7 @@ export default function Navbar() {
             <Link href="#">
               <div className="hover:text-gray-300">Home</div>
             </Link>
-            <Link href="#">
+            <Link href="/about_us">
               <div className="hover:text-gray-300">About Us</div>
             </Link>
             <Link href="#">
@@ -84,7 +84,7 @@ export default function Navbar() {
             <Link href="#">
               <div className="hover:text-gray-300">Feature Events</div>
             </Link>
-            <Link href="/app/contact">
+            <Link href="/contact">
               <div className="hover:text-gray-300">Contact Us</div>
             </Link>
           </div>
