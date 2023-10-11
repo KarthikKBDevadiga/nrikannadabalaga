@@ -1,96 +1,59 @@
 'use client';
+import React from 'react';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
-import { Fragment, useState } from 'react';
-import { Dialog, Listbox, Menu, Transition } from '@headlessui/react';
-import {
-  Bars3Icon,
-  CalendarDaysIcon,
-  CheckCircleIcon,
-  CreditCardIcon,
-  EllipsisVerticalIcon,
-  FaceFrownIcon,
-  FaceSmileIcon,
-  FireIcon,
-  HandThumbUpIcon,
-  HeartIcon,
-  PaperClipIcon,
-  UserCircleIcon,
-  XMarkIcon as XMarkIconMini,
-} from '@heroicons/react/20/solid';
-import PageFrame from '@/components/PageFrame';
-import { Metadata } from 'next';
-function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(' ');
-}
-
-export default function AboutUs() {
-  const [selected, setSelected] = useState();
+const AboutUs = () => {
+  const teamMembers = [
+    {
+      name: 'John Doe',
+      position: 'President',
+      imageUrl: 'https://source.unsplash.com/200x200/?person1',
+    },
+    {
+      name: 'Jane Smith',
+      position: 'Vice President',
+      imageUrl: 'https://source.unsplash.com/200x200/?person2',
+    },
+    {
+      name: 'Alice Johnson',
+      position: 'Treasurer',
+      imageUrl: 'https://source.unsplash.com/200x200/?person3',
+    },
+  ];
 
   return (
-    <PageFrame meta={{ title: "About Us" }}>
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl md:max-w-none mx-auto">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
-              NRI Kannada Balaga
-            </h2>
-            <p className="mt-4 text-lg text-gray-500">
-              Kannada Balaga UK is turning 40 years old! We are delighted to
-              invite you to attend Kannada Balaga’s 40th Anniversary
-              celebrations to be held on 30th September and 1st October 2023 at
-              Byron Hall, Christchurch Ave, Harrow, London HA3 5BD!
-            </p>
-            <p className="mt-4 text-lg text-gray-500">
-              The program has a Royal presence – His Highness Yaduveer
-              Krishnadutta Chamaraja Wadiyar, Maharaja of Mysore, will be the
-              Chief Guest for the event! Iconic personalities like Dr Gururaja
-              Karajagi, Shri Vishweshwara Bhat, and His Holiness Swamy
-              Japanandaji Maharaj are the Guests of Honour. To top it all, we
-              have melody king Rajesh Krishnan and team entertaining the crowd
-              with their fantastic music!
+    <div className="bg-gray-100 min-h-screen">
+      <Navbar />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-8 mb-8">
+        <div className="max-w-3xl text-center">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-5">About Us</h1>
+          <p className="text-lg sm:text-xl text-gray-600">
+            Welcome to NRI Kannada Balaga. We are a community dedicated to preserving and promoting Kannada culture.
+          </p>
+          <div className="mt-10">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900">Our Mission</h2>
+            <p className="text-lg sm:text-xl text-gray-600">
+              Our mission is to foster unity among Kannadigas living abroad and to celebrate our language and heritage.
             </p>
           </div>
-          <div className="mt-8 max-w-md mx-auto">
-            <div className="group flex border-2 border-gray-400 focus-within:border-[#ff0000] duration-500 max-w-xl mx-auto mt-16 rounded-md">
-              <input
-                className="flex-1 px-3 py-1.5 outline-none bg-transparent text-sm focus:placeholder-red-300 placeholder-gray-400 duration-500"
-                type="email"
-                placeholder="ashokkumar@gmail.com"
-              />
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg
-                  className="w-5 h-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                  />
-                </svg>
-              </div>
-              <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-                <button
-                  type="button"
-                  className="py-1.5 px-4 bg-gray-400 cursor-pointer duration-500"
-                >
-                  Subscribe
-                </button>
-              </div>
+          <div className="mt-10">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900">Meet Our Team</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-5">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                  <img src={member.imageUrl} alt={member.name} className="w-32 h-32 mx-auto rounded-full" />
+                  <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-gray-900">{member.name}</h3>
+                  <p className="mt-2 text-lg text-gray-600">{member.position}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-
-     
-      
-                  
-                  
-
-     
-    </PageFrame>
+      <Footer />
+    </div>
   );
-}
+};
+
+export default AboutUs;
